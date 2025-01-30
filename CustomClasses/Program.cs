@@ -6,7 +6,7 @@ Console.WriteLine("1. Client");
 Console.WriteLine("2. Facture");
 Console.Write("Select your test: ");
 
-var option = Console.ReadLine();
+string? option = Console.ReadLine();
 
 while(option != "0")
 {           
@@ -22,9 +22,7 @@ while(option != "0")
             Console.WriteLine(executionResult.Message);
         }
         else
-        {
             Console.WriteLine("Client name is mandatory");
-        }
     }
     else if(option == "2")
     {
@@ -38,17 +36,15 @@ while(option != "0")
             Console.WriteLine(executionResult.Message);
         }
         else
-        {
             Console.WriteLine("Facture name is mandatory");
-        }
     }
     else
     {
         Console.WriteLine("Invalid option");
     }
 
-    Console.Write("Do you want to continue? (y/n): ");
-    var continueOption = Console.ReadLine();
+    Console.Write("Do you want to continue? (y/n): \n");
+    string? continueOption = Console.ReadLine();
 
     if(continueOption != "y")
     {
